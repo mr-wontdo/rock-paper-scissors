@@ -1,3 +1,18 @@
+function getPlayerChoice() {
+    return prompt("Rock, paper, or scissors?");
+}
+
+function getComputerChoice() {
+    let randomNumber = Math.random();
+    if (randomNumber < .33) {
+        return "rock";
+    } else if (randomNumber > .66) {
+        return "paper";
+    } else {
+        return "scissors";
+    }
+}
+
 // Prompt the player to input 'rock', 'paper', or 'scissors'
 // Convert the input to lower case and assign to variable playerSelection
 
@@ -17,15 +32,3 @@
 // Else if playerSelection is 'scissors' and computerSelection is 'paper', declare that the player won.
 
 // Else return that the game is tied.
-
-
-function getComputerChoice() {
-    let randomNumber = Math.random();
-    if (randomNumber < .33) {
-        return "rock";
-    } else if (randomNumber > .66) {
-        return "paper";
-    } else {
-        return "scissors";
-    }
-}
