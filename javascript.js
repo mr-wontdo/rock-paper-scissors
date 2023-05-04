@@ -1,4 +1,12 @@
-function playRound(playerSelection, computerSelection) {
+function playRound() {
+    let playerSelection = getPlayerChoice();
+    let computerSelection = getComputerChoice();
+    console.log(`Player: ${playerSelection}`);
+    console.log(`Computer: ${computerSelection}`);
+    console.log(getRoundResult(playerSelection, computerSelection));
+}
+
+function getRoundResult(playerSelection, computerSelection) {
     if (playerSelection === "rock" && computerSelection === "paper") {
         return "You lose! Paper beats rock!";
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
