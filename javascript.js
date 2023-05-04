@@ -1,5 +1,5 @@
 function getPlayerChoice() {
-    return prompt("Rock, paper, or scissors?");
+    return prompt("Rock, paper, or scissors?").toLowerCase();
 }
 
 function getComputerChoice() {
