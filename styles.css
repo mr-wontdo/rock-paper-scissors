@@ -1,6 +1,6 @@
 * {
     background-color: grey;
-    /* border: 1px solid white; */
+    border: 1px solid white;
     color: white;
     box-sizing: border-box;
     margin: 0;
@@ -30,15 +30,13 @@ body {
     gap: 100px;
 }
 
-.image,
-.score,
+.scorecard,
 .button {
-    text-align: center;
     display: flex;
     justify-content: space-around;
     width: 400px;
 }
 
 button {
-    padding: 10px;
+    padding: 20px;
 }
