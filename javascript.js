@@ -7,6 +7,7 @@ const computerCurrentScore = document.querySelector('.computer .score');
 const playerCurrentSelection = document.querySelector('.player .image');
 const computerCurrentSelection = document.querySelector('.computer .image');
 const buttons = document.querySelectorAll('button');
+
 buttons.forEach(button => button.addEventListener('click', playRound));
 
 function playRound(e) {
@@ -17,6 +18,15 @@ function playRound(e) {
     textResult.textContent = getRoundResult(playerSelection, computerSelection);
     playerCurrentScore.textContent = `Score: ${playerScore}`;
     computerCurrentScore.textContent = `Score: ${computerScore}`;
+    if (playerScore === 5) {
+        textResult.textContent = `You won the game! The final score is ${playerScore} : ${computerScore}!`;
+        playerScore = 0
+        computerScore = 0;
+    } else if (computerScore === 5) {
+        textResult.textContent = `You lost the game! The final score is ${playerScore} : ${computerScore}!`;
+        playerScore = 0
+        computerScore = 0;
+    }
 }
 
 function getRoundResult(playerSelection, computerSelection) {
@@ -43,16 +53,6 @@ function getRoundResult(playerSelection, computerSelection) {
     }
 }
 
-function getFinalResult(playerScore, computerScore) {
-    if (playerScore > computerScore) {
-        console.log('You won the game!');
-    } else if (computerScore > playerScore) {
-        console.log('You lost the game! The computer won!');
-    } else {
-        console.log('It is a tied game!')
-    }
-}
-
 function getComputerChoice() {
     let randomNumber = Math.random();
     if (randomNumber < .33) {
@@ -63,20 +63,3 @@ function getComputerChoice() {
         return 'scissors';
     }
 }
-
-// game();
-
-// function game() {
-//     playerScore = 0;
-//     computerScore = 0;
-//     for (let i = 1; i <= 5; i++) {
-//         playRound();
-//         console.log(`Player Score: ${playerScore}`);
-//         console.log(`Computer Score: ${computerScore}`);
-//     }
-//     getFinalResult(playerScore, computerScore);
-// }
-
-// function getPlayerChoice() {
-//     // return prompt('Rock, paper, or scissors?').toLowerCase();
-// }
