@@ -3,11 +3,11 @@ let computerScore = 0;
 
 const textResult = document.querySelector('.content h2');
 
-const playerCurrentScore = document.querySelector('.player-score');
-const computerCurrentScore = document.querySelector('.computer-score');
+const playerCurrentScore = document.querySelector('.player .score');
+const computerCurrentScore = document.querySelector('.computer .score');
 
-const playerCurrentSelection = document.querySelector('.image .player');
-const computerCurrentSelection = document.querySelector('.image .computer');
+const playerCurrentSelection = document.querySelector('.player .image');
+const computerCurrentSelection = document.querySelector('.computer .image');
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', playRound));
@@ -18,8 +18,8 @@ function playRound(e) {
     playerCurrentSelection.textContent = `${playerSelection}`.toUpperCase();
     computerCurrentSelection.textContent = `${computerSelection}`.toUpperCase();
     textResult.textContent = getRoundResult(playerSelection, computerSelection);
-    playerCurrentScore.textContent = `${playerScore}`;
-    computerCurrentScore.textContent = `${computerScore}`;
+    playerCurrentScore.textContent = `Score: ${playerScore}`;
+    computerCurrentScore.textContent = `Score: ${computerScore}`;
 }
 
 function getRoundResult(playerSelection, computerSelection) {
