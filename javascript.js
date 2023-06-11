@@ -1,21 +1,12 @@
 let playerScore = 0;
 let computerScore = 0;
-game();
 
-function game() {
-    playerScore = 0;
-    computerScore = 0;
-    for (let i = 1; i <= 5; i++) {
-        playRound();
-        console.log(`Player Score: ${playerScore}`);
-        console.log(`Computer Score: ${computerScore}`);
-    }
-    getFinalResult(playerScore, computerScore);
-}
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => button.addEventListener('click', playRound));
 
-function playRound() {
-    let playerSelection = getPlayerChoice();
-    let computerSelection = getComputerChoice();
+function playRound(e) {
+    const playerSelection = e.srcElement.classList.value;
+    const computerSelection = getComputerChoice();
     console.log(`Player: ${playerSelection}`);
     console.log(`Computer: ${computerSelection}`);
     console.log(getRoundResult(playerSelection, computerSelection));
@@ -55,10 +46,6 @@ function getFinalResult(playerScore, computerScore) {
     }
 }
 
-function getPlayerChoice() {
-    return prompt('Rock, paper, or scissors?').toLowerCase();
-}
-
 function getComputerChoice() {
     let randomNumber = Math.random();
     if (randomNumber < .33) {
@@ -69,3 +56,20 @@ function getComputerChoice() {
         return 'scissors';
     }
 }
+
+// game();
+
+// function game() {
+//     playerScore = 0;
+//     computerScore = 0;
+//     for (let i = 1; i <= 5; i++) {
+//         playRound();
+//         console.log(`Player Score: ${playerScore}`);
+//         console.log(`Computer Score: ${computerScore}`);
+//     }
+//     getFinalResult(playerScore, computerScore);
+// }
+
+// function getPlayerChoice() {
+//     // return prompt('Rock, paper, or scissors?').toLowerCase();
+// }
