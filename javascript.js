@@ -22,50 +22,50 @@ function playRound() {
 }
 
 function getRoundResult(playerSelection, computerSelection) {
-    if (playerSelection === "rock" && computerSelection === "paper") {
+    if (playerSelection === 'rock' && computerSelection === 'paper') {
         computerScore += 1;
-        return "You lose! Paper beats rock!";
-    } else if (playerSelection === "rock" && computerSelection === "scissors") {
+        return 'You lose! Paper beats rock!';
+    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         playerScore += 1;
-        return "You win! Rock beats scissors!";
-    } else if (playerSelection === "paper" && computerSelection === "rock") {
+        return 'You win! Rock beats scissors!';
+    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
         playerScore += 1;
-        return "You win! Paper beats rock!";
-    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+        return 'You win! Paper beats rock!';
+    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         computerScore += 1;
-        return "You lose! Scissors beat paper!";
-    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+        return 'You lose! Scissors beat paper!';
+    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         computerScore += 1;
-        return "You lose! Rock beats scissors!";
-    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+        return 'You lose! Rock beats scissors!';
+    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         playerScore += 1;
-        return "You win! Scissors beat paper!"
+        return 'You win! Scissors beat paper!'
     } else {
-        return "Tied!"
+        return 'Tied!'
     }
 }
 
 function getFinalResult(playerScore, computerScore) {
     if (playerScore > computerScore) {
-        console.log("You won the game!");
+        console.log('You won the game!');
     } else if (computerScore > playerScore) {
-        console.log("You lost the game! The computer won!");
+        console.log('You lost the game! The computer won!');
     } else {
-        console.log("It's a tied game!")
+        console.log('It is a tied game!')
     }
 }
 
 function getPlayerChoice() {
-    return prompt("Rock, paper, or scissors?").toLowerCase();
+    return prompt('Rock, paper, or scissors?').toLowerCase();
 }
 
 function getComputerChoice() {
     let randomNumber = Math.random();
     if (randomNumber < .33) {
-        return "rock";
+        return 'rock';
     } else if (randomNumber > .66) {
-        return "paper";
+        return 'paper';
     } else {
-        return "scissors";
+        return 'scissors';
     }
 }
