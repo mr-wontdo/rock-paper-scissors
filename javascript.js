@@ -2,13 +2,10 @@ let playerScore = 0;
 let computerScore = 0;
 
 const textResult = document.querySelector('.content h2');
-
 const playerCurrentScore = document.querySelector('.player .score');
 const computerCurrentScore = document.querySelector('.computer .score');
-
 const playerCurrentSelection = document.querySelector('.player .image');
 const computerCurrentSelection = document.querySelector('.computer .image');
-
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', playRound));
 
@@ -83,7 +80,3 @@ function getComputerChoice() {
 // function getPlayerChoice() {
 //     // return prompt('Rock, paper, or scissors?').toLowerCase();
 // }
-
-
-// Press button to start game
-// 
