@@ -11,7 +11,7 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', playRound));
 
 function playRound(e) {
-    const playerSelection = e.srcElement.classList.value;
+    const playerSelection = e.srcElement.innerText.toLowerCase();
     const computerSelection = getComputerChoice();
     playerCurrentSelection.textContent = `${playerSelection}`.toUpperCase();
     computerCurrentSelection.textContent = `${computerSelection}`.toUpperCase();
