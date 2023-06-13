@@ -31,8 +31,8 @@ body {
     gap: 100px;
 }
 
-.scorecard,
-.button {
+.scorecards,
+.buttons {
     display: flex;
     gap: 20px;
 }
