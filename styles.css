@@ -37,6 +37,12 @@ body {
     gap: 24px;
 }
 
+button.rock,
+button.paper,
+button.scissors {
+    font-weight: bold;
+}
+
 .player,
 .computer {
     text-align: center;
