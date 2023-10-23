@@ -1,2 +1,2 @@
 # rock-paper-scissors
-A project that utilizes JavaScript to create a rock paper scissors game.
+A Rock Paper Scissors game created using HTML, CSS, and JavaScript.
